@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script src="../dist/scrollotopo.min.js"></script>
 	<style>
 		.scrollTopo {
 			width: 50px;
@@ -39,21 +40,7 @@
 			height: 2000px;
 			width: 100%;
 			float: left;
-		}
-		div:nth-child(5n+1) {
-			background-color: lime;
-		}
-		div:nth-child(5n+2) {
-			background-color: red;
-		}
-		div:nth-child(5n+3) {
-			background-color: yellow;
-		}
-		div:nth-child(5n+4) {
-			background-color: orange;
-		}
-		div:nth-child(5n+5) {
-			background-color: aqua;
+			border-bottom: 1px solid grey;
 		}
 	</style>
 </head>
@@ -63,7 +50,6 @@
 	<div></div>
 	<div></div>
 	<div></div>
-	<script src="https://raw.githubusercontent.com/doug-orchard/scrolloTopo/dist/scrollotopo.min.js"></script>
 	<script>
 		var ScrollButton = new ScrolloTopo();
 		ScrollButton.init();
