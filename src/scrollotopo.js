@@ -3,7 +3,7 @@ var ScrolloTopo = function(options) {
     var elems,
         CLASS_MAIN = 'scrollTopo',
         CLASS_SHOW = CLASS_MAIN + '-show',
-        EVT_CLICK = 'click',
+        EVT_CLICK  = 'click',
         EVT_SCROLL = 'scroll';
 
     //utils
@@ -32,11 +32,11 @@ var ScrolloTopo = function(options) {
     }
 
     function _getWindowScrollPos(){
-        return options.target ? options.target.scrollTop : window.pageYOffset || document.scrollTop;
+        return options && options.target ? options.target.scrollTop : window.pageYOffset || document.scrollTop;
     }
 
     function _toggleScrollButton(elem) {
-        var toggle = _getWindowScrollPos() >= (options.location || 100) ? true : false;
+        var toggle = _getWindowScrollPos() >= (options && options.location || 100) ? true : false;
         _toggleClass( elem, CLASS_SHOW, toggle );
     }
 
@@ -48,7 +48,7 @@ var ScrolloTopo = function(options) {
 
     function scrollToY(scrollTargetY, speed, easing) {
 
-        var scrollItem = options.target || window;
+        var scrollItem = options && options.target || window;
 
         var scrollY = scrollItem.scrollY,
             scrollTargetY = scrollTargetY || 0,
